@@ -1,0 +1,8 @@
+services:
+  rasp-llm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rasp-llm
+    ports:
+      - "2866:2866"
