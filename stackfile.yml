@@ -1,0 +1,14 @@
+services:
+  atom-mini:
+    image: atom-mini-server:v0.1
+    networks:
+      - atom-mini-server
+    ports:
+      - "2866:2866"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+networks:
+  atom-mini-server:
+    driver: overlay
